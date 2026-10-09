@@ -70,10 +70,3 @@ git push -u origin main
 
 Food photos load from Unsplash. If any image fails to load, the app shows a built-in branded fallback image so layouts never break. To use your own photos, put them in `public/images/` and change the `image` fields in `src/data/menu.js` (for example `/images/burger.jpg`).
 
-## What needs a backend for a real restaurant
-
-- Receiving orders (API + database) and notifying staff
-- Real payments (for example Stripe or a mobile-money provider)
-- Live menu, stock and opening-hours management
-- Delivery zones, driver dispatch and order status tracking
-- Customer accounts, receipts and email/SMS confirmations

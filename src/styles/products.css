@@ -1,0 +1,118 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+.product:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.product-media {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: var(--cream);
+}
+.product-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.product:hover .product-media img {
+  transform: scale(1.06);
+}
+.product-tag {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.25rem 0.7rem;
+  border-radius: var(--radius-pill);
+  background: var(--charcoal);
+  color: var(--cream);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.product-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 1.1rem 1.15rem 1.2rem;
+}
+.product-category {
+  font-size: 0.85rem;
+  color: var(--orange);
+  font-weight: 600;
+}
+.product-name {
+  margin-top: 0.15rem;
+  font-family: var(--font-display);
+  font-size: 1.65rem;
+  font-weight: 800;
+  line-height: 1.05;
+}
+.product-desc {
+  margin-top: 0.45rem;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+.product-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+.product-price {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 800;
+  line-height: 1;
+}
+.product-incart {
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  color: var(--success);
+  font-weight: 600;
+}
+
+.btn-add {
+  min-height: 42px;
+  padding: 0.5rem 1.05rem;
+  border-color: var(--charcoal);
+  background: var(--charcoal);
+  color: #fff;
+  font-size: 0.95rem;
+}
+.btn-add:hover {
+  background: var(--orange);
+  border-color: var(--orange);
+}
+.btn-add.is-added {
+  background: var(--success);
+  border-color: var(--success);
+}
+
+/* Row variant: image beside the text on wider screens */
+@media (min-width: 560px) {
+  .product-row {
+    flex-direction: row;
+  }
+  .product-row .product-media {
+    width: 42%;
+    aspect-ratio: auto;
+    flex-shrink: 0;
+  }
+  .product-row .product-name {
+    font-size: 1.5rem;
+  }
+}

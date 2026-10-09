@@ -1,0 +1,8 @@
+@import './styles/tokens.css';
+@import './styles/base.css';
+@import './styles/navbar.css';
+@import './styles/products.css';
+@import './styles/home.css';
+@import './styles/order.css';
+@import './styles/cart.css';
+@import './styles/footer.css';
